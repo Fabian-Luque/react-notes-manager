@@ -1,12 +1,18 @@
 import s from "./style.module.css";
 
-export const ButtonPrimary = ({ children, onClick, isDisabled }) => {
+export const ButtonPrimary = ({
+    className,
+    type,
+    children,
+    onClick,
+    isDisabled,
+}) => {
     return (
         <button
             disabled={isDisabled}
             onClick={onClick}
-            type="button"
-            className={`btn btn-primary ${s.button}`}
+            type={type}
+            className={`btn btn-primary ${s.button} ${className}`}
         >
             {children}
         </button>
